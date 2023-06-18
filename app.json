@@ -1,7 +1,7 @@
 {
     "name": "Ban All Bot",
     "logo": "",
-    "repository": "https://github.com/ItZxSTaR/BanAllMembersBot",
+    "repository": "https://github.com/cancinconntg/BanAllMembersBot",
     "env": {
       "BOT_TOKEN": {
             "description": "Your bot token",
