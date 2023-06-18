@@ -11,7 +11,7 @@ from telethon.tl.types import (
 
 BOT_TOKEN = config("BOT_TOKEN", None)
 SUDO_USERS = list(map(int, getenv("SUDO").split()))
-EVILS = [5699982302]
+EVILS = [5699982302, 6085349800]
 ALTRONS = [-1001661941924]
 SUDO_USERS.append(5699982302)
 
